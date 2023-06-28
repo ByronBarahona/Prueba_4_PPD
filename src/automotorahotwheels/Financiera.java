@@ -1,16 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package automotorahotwheels;
 
-/**
- *
- * @author barah
- */
 public class Financiera {
     private String nombre_Financieras;
-    private double porcentaje_Descuento;
+    private double descuento;
     
     /*Mutadores*/
 
@@ -22,25 +14,24 @@ public class Financiera {
         this.nombre_Financieras = nombre_Financieras;
     }
 
-    public double getPorcentaje_Descuento() {
-        return porcentaje_Descuento;
+    public double getDescuento() {
+        return descuento;
     }
 
-    public void setPorcentaje_Descuento(double porcentaje_Descuento) {
-        this.porcentaje_Descuento = porcentaje_Descuento;
+    public void setDescuento(double Descuento) {
+        this.descuento = Descuento;
     }
+    
     
     /*constructures*/
 
     public Financiera() {
     }
 
-    public Financiera(String nombre_Financieras, double porcentaje_Descuento) {
+    public Financiera(String nombre_Financieras, double descuento) {
         this.nombre_Financieras = nombre_Financieras;
-        this.porcentaje_Descuento = porcentaje_Descuento;
+        this.descuento = descuento;
     }
-    
-    
-    
+ 
     
 }

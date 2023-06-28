@@ -1,18 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package automotorahotwheels;
 
-/**
- *
- * @author barah
- */
 public class Vehiculo {
     private String patente;
     private String marca;
     private String modelo;
     private double valor;
+    private boolean vendido;
     
     
     /*Mutadores*/
@@ -48,18 +41,33 @@ public class Vehiculo {
     public void setValor(double valor) {
         this.valor = valor;
     }
+
+    public boolean isVendido() {
+        return vendido;
+    }
+
+    public void setVendido(boolean vendido) {
+        this.vendido = vendido;
+    }
+    
     
     /*Cosntructures*/
 
     public Vehiculo() {
     }
 
-    public Vehiculo(String patente, String marca, String modelo, double valor) {
+ 
+
+    public Vehiculo(String patente, String marca, double valor) {
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;
         this.valor = valor;
+        this.vendido = vendido;
     }
+    
+
+
     
     
     

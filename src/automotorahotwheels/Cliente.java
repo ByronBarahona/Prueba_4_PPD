@@ -1,17 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package automotorahotwheels;
 
-/**
- *
- * @author barah
- */
 public class Cliente {
     private String rut;
     private String nombre;
     private String apellido;
+    private boolean puedeOptarCredito;
+    private double creditoDisponible;
     
     /*Mutadores*/
 
@@ -38,17 +32,52 @@ public class Cliente {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+    public boolean getPuedeOptarCredito() {
+        return puedeOptarCredito;
+    }
+
+    public void setPuedeOptarCredito(boolean puedeOptarCredito) {
+        this.puedeOptarCredito = puedeOptarCredito;
+    }
+
+    public double getCreditoDisponible() {
+        return creditoDisponible;
+    }
+
+    public void setCreditoDisponible(double creditoDisponible) {
+        this.creditoDisponible = creditoDisponible;
+    }
+    
+        /*Metodos*/
+        public boolean tieneCreditoDisponible(Vehiculo vehiculo) {
+        return creditoDisponible >= vehiculo.getValor();
+    }
+
+    // Método para actualizar el crédito disponible después de una compra
+    public void actualizarCreditoDisponible(Vehiculo vehiculo) {
+        creditoDisponible -= vehiculo.getValor();
+    }
+
+    
     
     /*Constructores*/
 
-    public Cliente() {
+    public Cliente(String string, String john, String doe, boolean par) {
     }
 
     public Cliente(String rut, String nombre, String apellido) {
         this.rut = rut;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.puedeOptarCredito = puedeOptarCredito;
+        this.creditoDisponible = creditoDisponible;
     }
+    
+
+
+
+
     
     
     
